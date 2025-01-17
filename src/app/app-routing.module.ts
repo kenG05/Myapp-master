@@ -18,7 +18,11 @@ const routes: Routes = [
   {
     path: 'password',
     loadChildren: () => import('./password/password.module').then(m => m.PasswordPageModule)
+  },  {
+    path: 'viewmail',
+    loadChildren: () => import('./viewmail/viewmail.module').then( m => m.ViewmailPageModule)
   },
+
 ];
 
 @NgModule({
