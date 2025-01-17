@@ -1,0 +1,67 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>TeLlevoApp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Iniciar Sesion</ion-card-title>
+        <ion-img src="assets/img/loguito.png" id="logoLogin"></ion-img>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-list>
+          <!-- Campo de usuario -->
+          <ion-item>
+            <ion-icon name="person-outline" slot="start"></ion-icon>
+            <ion-input
+              label="Usuario"
+              type="text"
+              labelPlacement="floating"
+              [(ngModel)]="user.usuario"
+              id="usuarioInput">
+            </ion-input>
+          </ion-item>
+
+          <!-- Campo de contraseña -->
+          <ion-item>
+            <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+            <ion-input
+              label="Contraseña"
+              type="password"
+              labelPlacement="floating"
+              [(ngModel)]="user.password"
+              id="passwordInput">
+              <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+            </ion-input>
+          </ion-item>
+          <!-- Enlace para contraseña olvidada -->
+          <div>
+            <ion-button expand="full" class="custom-button" routerLink="/password">
+              ¿Olvidaste tu contraseña?
+            </ion-button>
+            
+          </div>
+
+          <!-- Mensaje de error o éxito -->
+          <div id="cuadroMsj">
+            <ion-label>{{msj}}</ion-label>
+          </div>
+
+          <!-- Indicador de carga -->
+          <div id="seccionCarga" *ngIf="carga">
+            <ion-label>Cargando</ion-label>
+            <mat-spinner></mat-spinner>
+          </div>
+
+          <!-- Botón de conexión -->
+          <ion-button shape="round" color="tertiary" (click)="conectar()" id="btnLogin">Conectar</ion-button>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+

@@ -1,0 +1,62 @@
+ion-label{
+    font-size: 18px;
+}
+
+#btnProgramar{
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 2%;
+}
+
+#btnVerificar{
+    text-align: center;
+    padding-top: 3%;
+    
+}
+
+ion-card {
+    text-align: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(8, 8, 8, 0.1);
+    width: 90%;
+    height: 80%;
+    border-radius: 10%;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 2%;
+    background: #272c39 ;
+  }
+
+
+  ion-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 10; /* Ensures it stays above other elements */
+}
+
+ion-menu {
+    --background: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco para contraste */
+  }
+  
+  ion-menu ion-header ion-toolbar {
+    --background: #000; /* Fondo negro del encabezado */
+    --color: #fff; /* Color del texto del título */
+  }
+  
+  ion-menu ion-content {
+    --background: #000; /* Fondo negro del contenido */
+  }
+  
+  ion-menu ion-item {
+    --background: transparent; /* Fondo transparente para los ítems */
+    --color: #fff; /* Texto blanco */
+  }
+  
+  ion-menu ion-item ion-icon {
+    color: #fff; /* Íconos en blanco */
+  }
+  
+
+
+

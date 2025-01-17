@@ -1,0 +1,117 @@
+#container {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #8c8c8c;
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+ion-header ion-toolbar ion-title {
+  text-align: center;
+  font-size: large;
+}
+
+ion-card {
+  text-align: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  height: 50%;
+  border-radius: 10%;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-bottom: 2%;
+  background-color: rgb(0, 0, 0); /* Fondo blanco para el card */
+}
+
+ion-card-title {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  text-align: center; 
+  height: 100%; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#logoLogin {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  margin-top: 10%;
+  margin-bottom: 5%;
+  object-fit: cover;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#btnLogin {
+  text-align: center;
+  height: 30%;
+  width: 80%;
+}
+
+#seccionCarga {
+  padding: 2%;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 5%;
+}
+
+#seccionCarga mat-spinner {
+  width: 50% !important;
+  margin: auto;
+  margin-top: 3%;
+}
+
+ion-input {
+  font-size: 20px;
+}
+
+.custom-button {
+  --background: black;
+  --color: white; 
+}
+
+ion-card-title {
+  font-weight: 300; 
+}
+
+ion-item {
+  --padding-start: 10px; 
+  --padding-end: 10px;
+}
+
+/* Estilo para el campo de usuario (más pequeño) */
+#usuarioInput {
+  font-size: 14px;
+}
+
+/* Estilo para el campo de contraseña (más grande) */
+#passwordInput {
+  font-size: 18px;
+}
+
+.custom-button {
+  font-weight: 300; /* Usamos 300 para que la letra sea más delgada */
+}
+
