@@ -39,13 +39,11 @@
             </ion-input>
           </ion-item>
           <!-- Enlace para contraseña olvidada -->
-          <div>
-            <ion-button expand="full" class="custom-button" routerLink="/password">
+          <div class="forgot-password-container">
+            <a routerLink="/password" class="forgot-password-link">
               ¿Olvidaste tu contraseña?
-            </ion-button>
-            
+            </a>
           </div>
-
           <!-- Mensaje de error o éxito -->
           <div id="cuadroMsj">
             <ion-label>{{msj}}</ion-label>

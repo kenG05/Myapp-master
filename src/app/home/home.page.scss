@@ -5,7 +5,6 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-
 }
 
 #container strong {
@@ -39,7 +38,7 @@ ion-card {
   margin-right: 5%;
   margin-left: 5%;
   margin-bottom: 2%;
-  background-color: rgb(0, 0, 0); /* Fondo blanco para el card */
+  background-color: rgb(29, 29, 29); /* Fondo blanco para el card */
 }
 
 ion-card-title {
@@ -59,10 +58,11 @@ ion-card-title {
   margin-top: 10%;
   margin-bottom: 5%;
   object-fit: cover;
-  border: 2px solid rgb(0, 0, 0);
-  border-radius: 50%;
+  border: 2px solid #534c7a;  /* Purple border */
+  border-radius: 50%;  /* Keeps it circular */
   overflow: hidden;
 }
+
 
 #btnLogin {
   text-align: center;
@@ -75,6 +75,7 @@ ion-card-title {
   margin-left: 25%;
   margin-right: 25%;
   margin-top: 5%;
+  background-color: rgb(29, 29, 29);  /* Color de fondo gris claro */
 }
 
 #seccionCarga mat-spinner {
@@ -85,6 +86,7 @@ ion-card-title {
 
 ion-input {
   font-size: 20px;
+  transition: font-size 0.3s ease-in-out;
 }
 
 .custom-button {
@@ -101,18 +103,16 @@ ion-item {
   --padding-end: 10px;
 }
 
-/* Estilo para el campo de usuario (más pequeño) */
-#usuarioInput {
-  font-size: 14px;
-}
 
-/* Estilo para el campo de contraseña (más grande) */
-#passwordInput {
-  font-size: 18px;
-}
+.forgot-password-container {
 
-.custom-button {
-  font-weight: 300; /* Usamos 300 para que la letra sea más delgada */
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: 5px;
+  text-align: center;
 }
 
 .forgot-password-link {
@@ -121,5 +121,6 @@ ion-item {
   text-decoration: underline;
   cursor: pointer;
 }
+
 
 
