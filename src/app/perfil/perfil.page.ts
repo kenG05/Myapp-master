@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../service/auth.service';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-perfil',
@@ -9,22 +11,37 @@ import { Router } from '@angular/router';
 })
 export class PerfilPage implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private auth: AuthService, private router: Router, private toast: ToastController) { }
 
   user = {
-   usuario: '',
-   password: '',
+    usuario: '',
+    password: '',
   };
 
   nombreUsuario = '';
-  ngOnInit() {}
-  ngAfterContentInit(){
+  ngOnInit() { }
+  ngAfterContentInit() {
     this.user = history.state.user;
     this.nombreUsuario = this.user.usuario;
   }
 
-  goHome() {
+  logout() {
+    this.auth.logout();
     this.router.navigate(['/home']);
+    this.generarToast('Usuario Desconectado');
   }
 
+  generarToast(message: string) {
+    const toast = this.toast.create({
+      message: message,
+      duration: 3000,
+      position: 'bottom',
+    });
+    toast.then((res) => {
+      res.present();
+    });
+  }
+
+
 }
+

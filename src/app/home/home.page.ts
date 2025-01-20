@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { AnimationController } from '@ionic/angular';
+import { AuthService } from '../service/auth.service';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -15,7 +16,7 @@ export class HomePage {
 
   msj = '';
   carga= false;
-  constructor(private router: Router, private animation: AnimationController) {}
+  constructor(private router: Router, private animation: AnimationController,private auth:AuthService) {}
 
   conectar() {
     // Validación: el campo de usuario no puede estar vacío

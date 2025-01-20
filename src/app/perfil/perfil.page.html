@@ -32,9 +32,9 @@
       <ion-label>Ayuda</ion-label>
     </ion-item>
 
-    <ion-item routerLink="/home">
+    <ion-item (click)="logout()">
       <ion-icon name="open-outline"></ion-icon>
-      <ion-label>Cerrar Sesion</ion-label>
+      <ion-label>Cerrar Sesión</ion-label>
     </ion-item>
   </ion-content>
 </ion-menu>
@@ -47,7 +47,8 @@
       </ion-buttons>
       <ion-title>TeLlevoApp</ion-title>
       <ion-buttons slot="end">
-        <ion-button (click)="goHome()">Volver</ion-button>
+    <ion-button [routerLink]="['/home']">Volver</ion-button>
+
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
