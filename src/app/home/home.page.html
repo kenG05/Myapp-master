@@ -1,6 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>TeLlevoApp</ion-title>
+    
   </ion-toolbar>
 </ion-header>
 
@@ -38,25 +39,33 @@
               <ion-input-password-toggle slot="end"></ion-input-password-toggle>
             </ion-input>
           </ion-item>
+      
+
+        <!-- Botón de conexión -->
+
+        <ion-button shape="round" color="tertiary" (click)="conectar()" id="btnLogin">Conectar</ion-button>
+                 <!-- Mensaje de error o éxito -->
+                 <div id="cuadroMsj">
+                  <ion-label>{{msj}}</ion-label>
+                </div>
+      
+                <!-- Indicador de carga -->
+                <div id="seccionCarga" *ngIf="carga">
+                  <ion-label>Cargando</ion-label>
+                  <mat-spinner></mat-spinner>
+                </div>
+
+
+
           <!-- Enlace para contraseña olvidada -->
           <div class="forgot-password-container">
             <a routerLink="/password" class="forgot-password-link">
               ¿Olvidaste tu contraseña?
             </a>
           </div>
-          <!-- Mensaje de error o éxito -->
-          <div id="cuadroMsj">
-            <ion-label>{{msj}}</ion-label>
-          </div>
 
-          <!-- Indicador de carga -->
-          <div id="seccionCarga" *ngIf="carga">
-            <ion-label>Cargando</ion-label>
-            <mat-spinner></mat-spinner>
-          </div>
-
-          <!-- Botón de conexión -->
-          <ion-button shape="round" color="tertiary" (click)="conectar()" id="btnLogin">Conectar</ion-button>
+          <ion-button  shape="round" fill="outline" color="tertiary" (click)="register()" id="btnLogin">Registrate</ion-button>
+  
         </ion-list>
       </ion-card-content>
     </ion-card>

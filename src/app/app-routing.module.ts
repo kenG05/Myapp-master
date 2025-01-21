@@ -31,6 +31,11 @@ const routes: Routes = [
     loadChildren: () => import('./viewmail/viewmail.module').then( m => m.ViewmailPageModule)
   },
   {
+    path: 'register',
+    loadChildren: () =>
+      import('./register/register.module').then((m) => m.RegisterPageModule),
+  },
+  {
     path: 'error',
     loadChildren: () =>
       import('./error/error.module').then((m) => m.ErrorPageModule),
@@ -39,6 +44,7 @@ const routes: Routes = [
     path: '**',
     redirectTo: 'error',
   },
+
 
 
 

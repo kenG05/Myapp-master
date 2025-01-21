@@ -11,6 +11,9 @@ import { AuthService } from '../Servicios/auth.service';
   standalone: false,
 })
 export class HomePage {
+  register() {
+    this.router.navigate(['/register']);
+  }
   user = {
     usuario: '',
     password: '',
@@ -46,7 +49,7 @@ export class HomePage {
     }
   
     // Validación de credenciales
-    if (this.auth.login(this.user.usuario, this.user.password)){
+    if (this.auth.loginStorage  (this.user.usuario, this.user.password)){
       let navigationExtras: NavigationExtras = {
         state: { user: this.user },
       };
@@ -63,7 +66,6 @@ export class HomePage {
       this.msj = 'Usuario o contraseña incorrectos.';
     }
   }
-  
 
   ngAfterContentInit(){
     this.animacionLogin();

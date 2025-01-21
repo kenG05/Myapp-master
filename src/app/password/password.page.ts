@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
   imports: [IonicModule, CommonModule, FormsModule],
 })
 export class PasswordPage implements OnInit {
+
   user = {
     email: '',
   };
@@ -36,5 +37,8 @@ export class PasswordPage implements OnInit {
     }
   
   
+  }
+  siguiente() {
+    this.router.navigate(['/viewmail']);
   }
 }
