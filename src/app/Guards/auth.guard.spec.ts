@@ -14,4 +14,8 @@ describe('authGuard', () => {
   it('should be created', () => {
     expect(executeGuard).toBeTruthy();
   });
+<<<<<<< Updated upstream
 });
+=======
+});
+>>>>>>> Stashed changes

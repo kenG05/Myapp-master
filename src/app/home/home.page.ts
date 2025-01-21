@@ -1,7 +1,11 @@
 import { Component } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { AnimationController } from '@ionic/angular';
+<<<<<<< Updated upstream
 import { AuthService } from '../service/auth.service';
+=======
+import { AuthService } from '../Servicios/auth.service';
+>>>>>>> Stashed changes
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -16,7 +20,13 @@ export class HomePage {
 
   msj = '';
   carga= false;
+<<<<<<< Updated upstream
   constructor(private router: Router, private animation: AnimationController,private auth:AuthService) {}
+=======
+  constructor(private router: Router, 
+    private animation: AnimationController, 
+    private auth: AuthService) {}
+>>>>>>> Stashed changes
 
   conectar() {
     // Validación: el campo de usuario no puede estar vacío
@@ -38,10 +48,11 @@ export class HomePage {
     }
   
     // Validación de credenciales
-    if (this.user.usuario === 'Bellota' && this.user.password === '123456') {
+    if (this.auth.login(this.user.usuario, this.user.password)){
       let navigationExtras: NavigationExtras = {
         state: { user: this.user },
       };
+      
       this.carga = true;
       this.msj = 'Conexión exitosa. Redirigiendo...';
   

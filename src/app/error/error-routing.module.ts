@@ -14,4 +14,8 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
+<<<<<<< Updated upstream
 export class ErrorPageRoutingModule {}
+=======
+export class ErrorPageRoutingModule {}
+>>>>>>> Stashed changes

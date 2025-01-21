@@ -17,4 +17,8 @@ import { ErrorPage } from './error.page';
   ],
   declarations: [ErrorPage]
 })
+<<<<<<< Updated upstream
 export class ErrorPageModule {}
+=======
+export class ErrorPageModule {}
+>>>>>>> Stashed changes

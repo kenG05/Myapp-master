@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+<<<<<<< Updated upstream
+=======
+import { authGuard } from './Guards/auth.guard';
+>>>>>>> Stashed changes
 
 const routes: Routes = [
   {
@@ -13,7 +17,12 @@ const routes: Routes = [
   },
   {
     path: 'perfil',
+<<<<<<< Updated upstream
     loadChildren: () => import('./perfil/perfil.module').then(m => m.PerfilPageModule)
+=======
+    loadChildren: () => import('./perfil/perfil.module').then(m => m.PerfilPageModule),
+    canActivate: [authGuard],
+>>>>>>> Stashed changes
   },
   {
     path: 'password',
@@ -25,6 +34,7 @@ const routes: Routes = [
   },
   {
     path: 'error',
+<<<<<<< Updated upstream
     loadChildren: () =>
       import('./error/error.module').then((m) => m.ErrorPageModule),
   },
@@ -34,6 +44,24 @@ const routes: Routes = [
   },
 
 
+=======
+    loadChildren: () => import('./error/error.module').then( m => m.ErrorPageModule)
+  },
+
+
+  {
+    path: 'error',
+    loadChildren: () =>
+      import('./error/error.module').then((m) =>m.ErrorPageModule),
+  },
+
+  {
+    path: '**',
+    redirectTo: 'error',
+  },
+
+
+>>>>>>> Stashed changes
 ];
 
 @NgModule({
