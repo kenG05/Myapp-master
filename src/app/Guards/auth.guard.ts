@@ -1,28 +1,25 @@
-<<<<<<< Updated upstream
-import { CanActivateFn, Route, Router } from '@angular/router';
-import { AuthService } from '../service/auth.service';
-
-export const authGuard: CanActivateFn = (route, state) => {
-  const auth:AuthService = new AuthService()
-  const router: Router = new Router();
-  return true;
-
-  if(auth.isConnected()){
-    return true;
-  }else{
-=======
 import { CanActivateFn, Router } from '@angular/router';
 import { AuthService } from '../Servicios/auth.service';
+import { ToastController } from '@ionic/angular';
 
 export const authGuard: CanActivateFn = (route, state) => {
   const auth: AuthService = new AuthService();
   const router: Router = new Router();
+  const toastController: ToastController = new ToastController();
 
-  if(auth.isConnected()){
+  if (auth.isConnected()) {
     return true;
   } else {
->>>>>>> Stashed changes
     router.navigate(['/home']);
+
+    const toast = toastController.create({
+      message: 'Debe autentificarse para acceder',
+      duration: 3000,
+      position: 'middle',
+    });
+    toast.then((res) => {
+      res.present();
+    });
     return false;
   }
 };

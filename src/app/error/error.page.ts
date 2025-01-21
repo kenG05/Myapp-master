@@ -7,17 +7,9 @@ import { Component, OnInit } from '@angular/core';
   standalone: false,
 })
 export class ErrorPage implements OnInit {
-<<<<<<< Updated upstream
+
   constructor() {}
 
   ngOnInit() {}
 }
-=======
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
->>>>>>> Stashed changes

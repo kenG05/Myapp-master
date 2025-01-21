@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { AnimationController } from '@ionic/angular';
-<<<<<<< Updated upstream
-import { AuthService } from '../service/auth.service';
-=======
 import { AuthService } from '../Servicios/auth.service';
->>>>>>> Stashed changes
+
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -20,13 +18,13 @@ export class HomePage {
 
   msj = '';
   carga= false;
-<<<<<<< Updated upstream
-  constructor(private router: Router, private animation: AnimationController,private auth:AuthService) {}
-=======
-  constructor(private router: Router, 
+
+
+  constructor(
+    private router: Router, 
     private animation: AnimationController, 
     private auth: AuthService) {}
->>>>>>> Stashed changes
+
 
   conectar() {
     // Validación: el campo de usuario no puede estar vacío
