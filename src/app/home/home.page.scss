@@ -38,7 +38,7 @@ ion-card {
   margin-right: 5%;
   margin-left: 5%;
   margin-bottom: 2%;
-  background-color: rgb(29, 29, 29); /* Fondo blanco para el card */
+  background-color: rgb(29, 29, 29); /*/Fondo blanco para el card /*/
 }
 
 ion-card-title {
@@ -89,6 +89,7 @@ ion-input {
   transition: font-size 0.3s ease-in-out;
 }
 
+
 .custom-button {
   --background: black;
   --color: white; 
@@ -131,6 +132,5 @@ ion-item {
   text-decoration: underline;
   cursor: pointer;
 }
-
 
 

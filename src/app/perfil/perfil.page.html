@@ -45,20 +45,23 @@
 <div class="ion-page" id="main-content">
   <ion-header>
     <ion-toolbar>
+      <!-- Menú en el lado izquierdo -->
       <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
+  
+      <!-- Título centrado -->
       <ion-title>TeLlevoApp</ion-title>
+  
+      <!-- Botón con ícono al lado derecho -->
       <ion-buttons slot="end">
-
-    <ion-button [routerLink]="['/home']">Volver</ion-button>
-
-
-       
-
+        <ion-button fill="clear" color="blue" [routerLink]="['/home']">
+          <ion-icon slot="start" name="home-outline"></ion-icon>
+        </ion-button>
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
+  
 
   <ion-content>
 

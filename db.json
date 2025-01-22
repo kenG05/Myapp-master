@@ -1,0 +1,24 @@
+{"user":[
+    {
+        "id":1,
+        "username":"bellota",
+        "correo":"correo@correo.cl",
+        "pass":"123456"
+
+    },
+    {
+        "id":2,
+        "username":"bombon",
+        "correo":"bombon@correo.cl",
+        "pass":"1234567"
+
+    },
+    {
+        "id":3,
+        "username":"burbuja",
+        "correo":"burbuja@correo.cl",
+        "pass":"12345678"
+
+    }
+]
+}
