@@ -40,7 +40,10 @@ export class PerfilPage implements OnInit {
     this.router.navigate(['/home']);
     this.generarToast('Usuario Desconectado');
 
+
   }
+
+ 
 
   generarToast(message: string) {
     const toast = this.toast.create({

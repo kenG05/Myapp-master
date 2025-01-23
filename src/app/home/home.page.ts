@@ -151,6 +151,11 @@ export class HomePage {
   animacion.play();
   }
 
+
+  limpiarFormulario() {
+    this.user.usuario = '';
+    this.user.password = '';
+  }
 }
 
 
