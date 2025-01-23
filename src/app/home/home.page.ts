@@ -37,7 +37,7 @@ export class HomePage {
             state: { user: this.user },
           };
           this.carga = true;
-         
+          //this.animacionLogin().play();
           this.msj = 'Conexion Exitosa';
        
           setTimeout(() => {
@@ -53,13 +53,17 @@ export class HomePage {
       this.msj = 'Credenciales no pueden estar vacias';
     }
   }
+
   ngAfterContentInit(){
     this.animacionLogin();
   }
 
+
+
   animacionLogin(){
     const imagen = document.querySelector(
       '#container ion-card ion-card-header ion-img'
+      
     ) as HTMLElement;
 
     const animacion = this.animation
