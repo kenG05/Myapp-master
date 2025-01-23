@@ -28,7 +28,6 @@ export class PasswordPage implements OnInit {
   }
 
   conectar() {
-     
     this.msj = '';
   
     // Verificar si el correo está vacío
@@ -36,9 +35,10 @@ export class PasswordPage implements OnInit {
       this.msj = 'El correo electrónico no puede estar vacío';
       return;
     }
-
-    this.router.navigate(['/viewmail']);
+  
   
   }
-
+  siguiente() {
+    this.router.navigate(['/viewmail']);
+  }
 }
