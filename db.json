@@ -1,0 +1,27 @@
+{
+   "users":[
+   {
+      "id":1,
+      "username":"Bellota",
+      "correo": "bellota@gmail.com",
+      "pass":"123456"
+   },
+   {
+    "id":2,
+    "username":"Admin",
+    "correo": "admin@gmail.com",
+    "pass":"admin1234"
+ },
+ {
+    "id":3,
+    "username":"us123",
+    "correo": "us123@gmail.com",
+    "pass":"us1234"
+ }
+
+
+
+   ]
+
+
+}

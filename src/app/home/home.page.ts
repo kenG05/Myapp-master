@@ -30,43 +30,29 @@ export class HomePage {
 
 
   conectar() {
-    // Validación: el campo de usuario no puede estar vacío
-    if (this.user.usuario.length === 0) {
-      this.msj = 'El campo de usuario no puede estar vacío.';
-      return;
-    }
-  
-    // Validación: el campo de contraseña no puede estar vacío
-    if (this.user.password.length === 0) {
-      this.msj = 'El campo de contraseña no puede estar vacío.';
-      return;
-    }
-  
-    // Validación: la contraseña debe tener al menos 6 caracteres
-    if (this.user.password.length < 6) {
-      this.msj = 'La contraseña debe tener al menos 6 caracteres.';
-      return;
-    }
-  
-    // Validación de credenciales
-    if (this.auth.loginStorage  (this.user.usuario, this.user.password)){
-      let navigationExtras: NavigationExtras = {
-        state: { user: this.user },
-      };
-      
-      this.carga = true;
-      this.msj = 'Conexión exitosa. Redirigiendo...';
-  
-      setTimeout(() => {
-        this.router.navigate(['/perfil'], navigationExtras);
-        this.msj = '';
-        this.carga = false;
-      }, 3000);
+    if (this.user.usuario.length > 0 && this.user.password.length > 0) {
+      this.auth.loginAPI(this.user.usuario, this.user.password).then((res) => {
+        if (res) {
+          let navigationExtras: NavigationExtras = {
+            state: { user: this.user },
+          };
+          this.carga = true;
+         
+          this.msj = 'Conexion Exitosa';
+       
+          setTimeout(() => {
+            this.router.navigate(['/perfil'], navigationExtras);
+            this.msj = '';
+            this.carga = false;
+          }, 3000);
+        } else {
+          this.msj = 'Credenciales erroneas';
+        }
+      });
     } else {
-      this.msj = 'Usuario o contraseña incorrectos.';
+      this.msj = 'Credenciales no pueden estar vacias';
     }
   }
-
   ngAfterContentInit(){
     this.animacionLogin();
   }

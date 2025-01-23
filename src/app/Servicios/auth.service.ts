@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { LocalStorageService } from './local-storage.service';
+import {APIService} from './api.service';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +9,7 @@ import { LocalStorageService } from './local-storage.service';
 export class AuthService {
   private static isLogged : boolean = false;
   private storage:LocalStorageService = new LocalStorageService();
+  private api: APIService = new APIService();
   constructor() { }
 
   login(user: string,  pass:string): boolean {
@@ -41,6 +43,28 @@ loginStorage(user: string, pass: string): boolean {
       return false;
     }
   }
+
+  loginAPI(user:string,pass:string):Promise<boolean>{
+     return new Promise((resolve)=> {
+      this.api.login(user).subscribe((res:any)=> {
+         if (res.length > 0) {
+            if((res[0].username==user||res[0].correo == user)&&
+            res[0].pass == pass
+          ){
+            this.storage.setItem('conectado', JSON.stringify(res[0]));
+            resolve(true);
+          }else{
+            resolve(false);
+            console.log('Credenciales incorrectas');
+          }
+
+         }else{
+          console.log('Llamada vacia');
+         }
+      });
+     });
+  }
+
   registrar(user: string, correo: string, pass: string) {
     //Recuperamos la lista de usuarios
     const listaUsuarios = this.storage.getItem('users') || [];

@@ -9,15 +9,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 //Incluimos libreria del Mat Progress Spinner de Angular material
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
   //Agregar MatProgressSpinnerModule a los imports
   imports: [
+
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
     MatProgressSpinnerModule,
+    HttpClientModule,
+
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
