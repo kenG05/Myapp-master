@@ -43,22 +43,28 @@
       "pass": "123456"
     },
     {
-      "id": 9,
+      "id": "9",
       "username": "vaca",
       "correo": "vaca@gmail.com",
       "pass": "123456"
     },
     {
-      "id": 9,
+      "id": "9",
       "username": "oso",
       "correo": "oso@gmail.com",
       "pass": "123456"
     },
     {
-      "id": 10,
+      "id": "10",
       "username": "coco",
       "correo": "coco@cl",
       "pass": "123456"
+    },
+    {
+      "id": 11,
+      "username": "maria",
+      "correo": "maria@gmail.com",
+      "pass": "maria222"
     }
   ],
   "pasajeros": [
