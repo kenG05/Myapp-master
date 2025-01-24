@@ -19,16 +19,22 @@
       "pass": "us1234"
     },
     {
-      "id": 4,
+      "id": "4",
       "username": "camila",
       "correo": "camila@gmail.com",
       "pass": "camila123"
     },
     {
-      "id": 5,
+      "id": "5",
       "username": "victoria",
       "correo": "victoria@gmail.com",
       "pass": "victoria123"
+    },
+    {
+      "id": 6,
+      "username": "papa",
+      "correo": "papa@gmail.com",
+      "pass": "papa12"
     }
   ],
   "pasajeros": [
@@ -91,16 +97,14 @@
       "id": "2649"
     }
   ],
-
-  "viaje" :[
+  "viaje": [
     {
-      "id" : "01",
-      "vehiculo" : "Kia Soluto",
+      "id": "01",
+      "vehiculo": "Kia Soluto",
       "duracion": "30 minutos",
       "conductor": "Diego Robert",
       "cantPasajeros": "4",
       "costo": "$5500"
-
     }
   ]
 }

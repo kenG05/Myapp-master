@@ -1,7 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>TeLlevoApp</ion-title>
-    
   </ion-toolbar>
 </ion-header>
 
@@ -14,7 +13,6 @@
       </ion-card-header>
 
       <ion-card-content>
-        
         <ion-list>
           <!-- Campo de usuario -->
           <ion-item>
@@ -26,6 +24,12 @@
               [(ngModel)]="user.usuario"
               id="usuarioInput">
             </ion-input>
+            <!-- Icono para limpiar el campo de usuario -->
+            <ion-icon 
+              name="close-outline" 
+              *ngIf="user.usuario" 
+              slot="end" 
+              (click)="user.usuario = ''"></ion-icon>
           </ion-item>
 
           <!-- Campo de contraseña -->
@@ -39,22 +43,27 @@
               id="passwordInput">
               <ion-input-password-toggle slot="end"></ion-input-password-toggle>
             </ion-input>
+            <!-- Icono para limpiar el campo de contraseña -->
+            <ion-icon 
+              name="close-outline" 
+              *ngIf="user.password" 
+              slot="end" 
+              (click)="user.password = ''"></ion-icon>
           </ion-item>
-      
 
-        <!-- Botón de conexión -->
+          <!-- Botón de conexión -->
+          <ion-button shape="round" color="tertiary" (click)="conectar()" id="btnLogin">Conectar</ion-button>
 
-        <ion-button shape="round" color="tertiary" (click)="conectar()" id="btnLogin">Conectar</ion-button>
-                 <!-- Mensaje de error o éxito -->
-                 <div id="cuadroMsj">
-                  <ion-label>{{msj}}</ion-label>
-                </div>
-      
-                <!-- Indicador de carga -->
-                <div id="seccionCarga" *ngIf="carga">
-                  <ion-label>Cargando</ion-label>
-                  <mat-spinner></mat-spinner>
-                </div>
+          <!-- Mensaje de error o éxito -->
+          <div id="cuadroMsj">
+            <ion-label>{{msj}}</ion-label>
+          </div>
+
+          <!-- Indicador de carga -->
+          <div id="seccionCarga" *ngIf="carga">
+            <ion-label>Cargando</ion-label>
+            <mat-spinner></mat-spinner>
+          </div>
 
           <!-- Enlace para contraseña olvidada -->
           <div class="forgot-password-container">
@@ -63,11 +72,9 @@
             </a>
           </div>
 
-          <ion-button  shape="round" fill="outline" color="tertiary" (click)="register()" id="btnLogin">Registrate</ion-button>
-  
+          <ion-button shape="round" fill="outline" color="tertiary" (click)="register()" id="btnLogin">Registrate</ion-button>
         </ion-list>
       </ion-card-content>
     </ion-card>
   </div>
 </ion-content>
-
