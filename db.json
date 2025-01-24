@@ -1,92 +1,94 @@
 {
-   "users":[
-   {
-      "id":1,
-      "username":"Bellota",
+  "users": [
+    {
+      "id": "1",
+      "username": "Bellota",
       "correo": "bellota@gmail.com",
-      "pass":"123456"
-   },
-   {
-    "id":2,
-    "username":"Admin",
-    "correo": "admin@gmail.com",
-    "pass":"admin1234"
- },
- {
-    "id":3,
-    "username":"us123",
-    "correo": "us123@gmail.com",
-    "pass":"us1234"
- }
-   ],
-
-
-
-    "pasajeros":[
-   {
-      "id":1,
-      "nombre":"Sebastian Lobos",
+      "pass": "123456"
+    },
+    {
+      "id": "2",
+      "username": "Admin",
+      "correo": "admin@gmail.com",
+      "pass": "admin1234"
+    },
+    {
+      "id": "3",
+      "username": "us123",
+      "correo": "us123@gmail.com",
+      "pass": "us1234"
+    },
+    {
+      "id": 4,
+      "username": "camila",
+      "correo": "camila@gmail.com",
+      "pass": "camila123"
+    },
+    {
+      "id": 5,
+      "username": "victoria",
+      "correo": "victoria@gmail.com",
+      "pass": "victoria123"
+    }
+  ],
+  "pasajeros": [
+    {
+      "id": "1",
+      "nombre": "Sebastian Lobos",
       "direccion": "Barrancas 5060, Conchali"
-     
-   },
-   {
-    "id":2,
-    "nombre":"Ana Rivera",
-    "direccion": "Santa Maria 3505, Quilicura"
-    
-   },
-
-   {
-     "id": 3,
-     "nombre": "Fernando Munoz",
-     "direccion": "El monte 3178, Lo Prado"
-   }
-     ],
-
-
-
-    "conductores": [
-
-   {
-      "id": 1,
+    },
+    {
+      "id": "2",
+      "nombre": "Ana Rivera",
+      "direccion": "Santa Maria 3505, Quilicura"
+    },
+    {
+      "id": "3",
+      "nombre": "Fernando Munoz",
+      "direccion": "El monte 3178, Lo Prado"
+    }
+  ],
+  "conductores": [
+    {
+      "id": "1",
       "nombre": "Diego Robert",
       "cantViajes": 20
-   },
-   {
-      "id": 2,
+    },
+    {
+      "id": "2",
       "nombre": "Vicente Orrego",
       "cantViajes": 25
-   },
-   {
-      "id": 3,
+    },
+    {
+      "id": "3",
       "nombre": "Marcos Catalan",
       "cantViajes": 50
-   }
-    ],
-
-    "vehiculos":[
-
-   {
+    }
+  ],
+  "vehiculos": [
+    {
       "patente": "QSD45G",
       "modelo": "Hyundai Accent",
       "anio": 2015,
       "color": "blanco",
-      "conductor": "Marcos Catalan"
-   },
-   {
+      "conductor": "Marcos Catalan",
+      "id": "50b7"
+    },
+    {
       "patente": "KJD580",
       "modelo": "Suzuki swift",
       "anio": 2018,
       "color": "rojo",
-      "conductor": "Vicente Orrego"
-   },
-   {
+      "conductor": "Vicente Orrego",
+      "id": "b008"
+    },
+    {
       "patente": "MCV6734",
       "modelo": "Kia Soluto",
       "anio": 2019,
       "color": "gris",
-      "conductor": "Diego Robert"
-   }
-    ]
-
+      "conductor": "Diego Robert",
+      "id": "2649"
+    }
+  ]
 }
