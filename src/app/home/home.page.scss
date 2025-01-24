@@ -3,7 +3,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 50%;
+  top: 54%;
   transform: translateY(-50%);
 }
 
@@ -38,7 +38,7 @@ ion-card {
   margin-right: 5%;
   margin-left: 5%;
   margin-bottom: 2%;
-  background-color: rgb(29, 29, 29); /* Fondo blanco para el card */
+  background-color: rgb(0, 0, 0); /* Fondo blanco para el card */
 }
 
 ion-card-title {
@@ -75,7 +75,7 @@ ion-card-title {
   margin-left: 25%;
   margin-right: 25%;
   margin-top: 5%;
-  background-color: rgb(29, 29, 29);  /* Color de fondo gris claro */
+  background-color: rgb(0, 0, 0);  /* Color de fondo gris claro */
 }
 
 #seccionCarga mat-spinner {
