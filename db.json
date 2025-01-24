@@ -90,5 +90,17 @@
       "conductor": "Diego Robert",
       "id": "2649"
     }
+  ],
+
+  "viaje" :[
+    {
+      "id" : "01",
+      "vehiculo" : "Kia Soluto",
+      "duracion": "30 minutos",
+      "conductor": "Diego Robert",
+      "cantPasajeros": "4",
+      "costo": "$5500"
+
+    }
   ]
 }
