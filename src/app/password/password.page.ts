@@ -29,15 +29,34 @@ export class PasswordPage implements OnInit {
 
   conectar() {
     this.msj = '';
-  
-    // Verificar si el correo está vacío
+    
+    // Validación: el correo no puede estar vacío
     if (this.user.email.length === 0) {
-      this.msj = 'El correo electrónico no puede estar vacío';
+      this.msj = 'El correo electrónico no puede estar vacío.';
       return;
     }
-  
-  
+
+    // Validación: el formato del correo debe ser válido
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(this.user.email)) {
+      this.msj = 'El formato del correo electrónico no es válido.';
+      return;
+    }
+
+    // Validación: el correo no puede exceder los 50 caracteres
+    if (this.user.email.length > 20) {
+      this.msj = 'El correo electrónico no puede exceder los 20 caracteres.';
+      return;
+    }
+
+    // Simulación de conexión (puedes reemplazar esta parte con la lógica real)
+    this.msj = 'Correo verificado correctamente. Redireccioanado...';
+    setTimeout(() => {
+      this.msj = ''; // Limpia el mensaje después de unos segundos
+      this.siguiente();
+    }, 2000);
   }
+
   siguiente() {
     this.router.navigate(['/viewmail']);
   }

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationExtras, Router } from '@angular/router';
-import { ToastController } from '@ionic/angular';
+import { Router } from '@angular/router';
 import { AuthService } from '../Servicios/auth.service';
 
 @Component({
@@ -11,7 +10,6 @@ import { AuthService } from '../Servicios/auth.service';
 })
 export class RegisterPage implements OnInit {
   constructor(
-    private toast: ToastController,
     private router: Router,
     private auth: AuthService
   ) {}
@@ -21,43 +19,62 @@ export class RegisterPage implements OnInit {
     correo: '',
     password: '',
   };
+
+  msj: string = '';  // Variable para mostrar mensajes de error o éxito
+
   ngOnInit() {}
 
+  goHome() {
+    this.router.navigate(['/home']);
+  }
+
   registrar() {
-    //Verificamos que los campos tengan valor
-    if (
-      this.user.usuario.trim().length > 0 ||
-      this.user.password.trim().length > 0 ||
-      this.user.correo.trim().length > 0
-    ) {
-      //Verificar si el registro se realizo
-     this.auth
-        .registerAPI(this.user.usuario, this.user.correo, this.user.password)
-        .then((res) => {
-          if (res) {
-            this.generarToast(' Registro Exitoso  \n Redireccionando');
-            setTimeout(() => {
-              this.router.navigate(['/home']);
-          }, 1500);
-        }   else {
-          this.generarToast('Correo o usuario ya existen');
-        }
-      
-       }); 
-     
-      } else {
-          this.generarToast('Credenciales no pueden estar vacias');
-      }
+    this.msj = '';  // Limpiar mensaje antes de validar
+
+    // Validación de campos vacíos
+    if (this.user.usuario.length === 0) {
+      this.msj = 'El campo de usuario no puede estar vacío.';
+      return;
     }
 
-  generarToast(mensaje: string) {
-    const toast = this.toast.create({
-      message: mensaje,
-      duration: 3000,
-      position: 'bottom',
-    });
-    toast.then((res) => {
-      res.present();
+    if (this.user.password.length === 0) {
+      this.msj = 'El campo de contraseña no puede estar vacío.';
+      return;
+    }
+
+    if (this.user.correo.trim().length === 0) {
+      this.msj = 'El campo de correo no puede estar vacío.';
+      return;
+    }
+
+    // Validación de longitud
+    if (this.user.usuario.length > 20) {
+      this.msj = 'El nombre de usuario no puede exceder los 20 caracteres.';
+      return;
+    }
+
+    if (this.user.password.length < 6 || this.user.password.length > 20) {
+      this.msj = 'La contraseña debe tener entre 6 y 20 caracteres.';
+      return;
+    }
+
+    if (this.user.correo.length > 50) {
+      this.msj = 'El correo no puede exceder los 50 caracteres.';
+      return;
+    }
+
+    // Registro de usuario
+    this.auth.registerAPI(this.user.usuario, this.user.correo, this.user.password).then((res) => {
+      if (res) {
+        this.msj = 'Registro Exitoso. Redireccionando...';
+        setTimeout(() => {
+          this.router.navigate(['/home']);
+        }, 1500);
+      } else {
+        this.msj = 'Correo o usuario ya existen.';
+      }
+    }).catch((error) => {
+      this.msj = 'Hubo un error al procesar la solicitud.';
     });
   }
 }

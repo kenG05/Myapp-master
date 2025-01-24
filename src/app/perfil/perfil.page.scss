@@ -1,70 +1,156 @@
 ion-label{
-    font-size: 18px;
+  font-size: 20px;
 }
 
-#btnProgramar{
-    text-align: center;
-    padding-top: 5%;
-    padding-bottom: 2%;
-}
-
-#btnVerificar{
-    text-align: center;
-    padding-top: 3%;
-    
+#container {
+margin-top: -90px; 
+padding-top: 10px; 
 }
 
 ion-card {
-    text-align: center;
-    justify-content: center;
-    box-shadow: 0 4px 6px rgba(8, 8, 8, 0.1);
-    width: 90%;
-    height: 80%;
-    border-radius: 10%;
-    margin-right: 5%;
-    margin-left: 5%;
-    margin-bottom: 2%;
-    background: #272c39 ;
-  }
+margin-top: 20px;
+}
 
 
-  ion-toolbar {
-  position: sticky;
-  top: 0;
-  z-index: 10; /* Ensures it stays above other elements */
+
+
+
+#btnProgramar{
+  text-align: center;
+  padding-top: 5%;
+  padding-bottom: 2%;
+}
+
+#btnVerificar{
+  text-align: center;
+  padding-top: 3%;
+  
+}
+
+ion-card {
+  text-align: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(239, 239, 239, 0.1);
+  width: 90%;
+  height: 80%;
+  border-radius: 10%;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  background: #000000 ;
+}
+
+
+ion-toolbar {
+position: sticky;
+top: 0;
+z-index: 10; 
 }
 
 ion-menu {
-    --background: #000; /* Fondo negro */
-    color: #fff; /* Texto blanco para contraste */
-  }
-  
-  ion-menu ion-header ion-toolbar {
-    --background: #000; /* Fondo negro del encabezado */
-    --color: #fff; /* Color del texto del título */
-  }
-  
-  ion-menu ion-content {
-    --background: #000; /* Fondo negro del contenido */
-  }
-  
-  ion-menu ion-item {
-    --background: transparent; /* Fondo transparente para los ítems */
-    --color: #fff; /* Texto blanco */
-  }
-  
-  ion-menu ion-item ion-icon {
-    color: #fff; /* Íconos en blanco */
-  }
-  
+  --background: #000; 
+  color: #fff; 
+}
+
+ion-menu ion-header ion-toolbar {
+  --background: #000; 
+  --color: #fff; 
+}
+
+ion-menu ion-content {
+  --background: #000; 
+}
+
+ion-menu ion-item {
+  --background: transparent; 
+  --color: #fff; 
+}
+
+ion-menu ion-item ion-icon {
+  color: #fff; 
+}
+
 #auto{
-  width: 60%;
-  height: 30%;
-  margin: auto;
-  margin-top: 1%;
-  margin-bottom: 1%;
-  filter: invert(1);
+width: 60%;
+height: 30%;
+margin: auto;
+margin-top: 1%;
+margin-bottom: 1%;
+filter: invert(1);
+
 
 }
+
+
+#seccionProgramar ion-button,
+#seccionVerficar ion-button {
+animation: pump 2s ease-in-out infinite; 
+}
+
+//botonessss con animacion
+
+@keyframes pump {
+0% {
+  transform: scale(1); 
+}
+50% {
+  transform: scale(1.1); 
+}
+100% {
+  transform: scale(1); 
+}
+}
+
+#seccionProgramar,
+#seccionVerficar {
+text-align: center;
+margin-top: 10px;
+}
+
+//Letra mas bonita
+
+ion-label.emblematic-text {
+font-family: 'Roboto', sans-serif;  
+font-weight: 300;  
+font-size: 19px;
+color: #ffffff;
+text-align: center;
+line-height: 1.5;
+margin: 10px 0;
+
+}
+
+.destacado {
+font-weight: bold; 
+color: #007bff;
+animation: movimientoVertical 2s ease-in-out infinite; 
+display: inline-block;
+}
+
+
+
+@keyframes movimientoVertical {
+0% {
+  transform: translateY(0); 
+}
+25% {
+  transform: translateY(-5px);
+}
+50% {
+  transform: translateY(5px);
+}
+75% {
+  transform: translateY(-5px); 
+}
+100% {
+  transform: translateY(0);
+}
+}
+
+
+
+
+
 
 
