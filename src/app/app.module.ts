@@ -13,15 +13,19 @@ import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
-  //Agregar MatProgressSpinnerModule a los imports
+  
   imports: [
 
     BrowserModule,
-    IonicModule.forRoot(),
+    IonicModule.forRoot({
+  
+    animated: true,
+    rippleEffect: true,
+    hardwareBackButton: true,
+    }),
     AppRoutingModule,
     MatProgressSpinnerModule,
     HttpClientModule,
-
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },

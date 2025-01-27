@@ -8,7 +8,7 @@ import { Observable, retry } from 'rxjs';
 })
 export class APIService {
 
-  private baseURL = 'http://localhost:3000';
+  private baseURL = 'https://00kfqrfd-3000.brs.devtunnels.ms';
   private http: HttpClient = inject(HttpClient);
   constructor() {}
 
