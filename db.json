@@ -61,10 +61,16 @@
       "pass": "123456"
     },
     {
-      "id": 11,
+      "id": "11",
       "username": "maria",
       "correo": "maria@gmail.com",
       "pass": "maria222"
+    },
+    {
+      "id": 12,
+      "username": "hola",
+      "correo": "hola@gmail.com",
+      "pass": "123456"
     }
   ],
   "pasajeros": [
