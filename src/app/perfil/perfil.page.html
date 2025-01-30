@@ -74,12 +74,13 @@
         
         <ion-card-content>
 
+          <ion-label>Si eres conductor presiona la siguiente opcion: <br> </ion-label>
           <div id="seccionProgramar">
             <ion-button expand="full" shape="round" color="tertiary" id="btnProgramar">Programar Viaje</ion-button><br>
           </div>
-
+          <ion-label>Si eres pasajero presiona la siguiente opcion: <br> </ion-label>
           <div id="seccionVerficar">
-            <ion-button expand="full" shape="round" color="tertiary" id="btnVerficar">Verificar vehículos con
+            <ion-button expand="full" shape="round" color="tertiary" id="btnVerficar" [routerLink]="['/dispo']">Verificar vehículos con
               capacidad</ion-button>
           </div>
         </ion-card-content>
