@@ -1,0 +1,64 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>TeLlevoApp</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/home']">Volver</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+
+  <ion-item lines="none" color="light" class="main-buttons ion-no-padding top_bar">
+    <ion-icon slot="start" color="primary"></ion-icon>
+    <ion-label>Viajes Disponibles</ion-label>
+  </ion-item>
+
+
+  <!-- Simulated Map Container -->
+  <div class="map-container">
+    <ion-fab class="centerPin" vertical="center" horizontal="center">
+      <ion-avatar>
+        <ion-img src="../../assets/img/pin.png"></ion-img>
+      </ion-avatar>
+    </ion-fab>
+  </div>
+
+
+  <ion-footer [translucent]="true" class="ion-no-border">
+    <ion-button expand="full" class="extended-rectangle" (click)="onButtonClick()">
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="auto">
+          <ion-avatar>
+            <ion-img src="../../assets/img/hatchback.png"></ion-img>
+          </ion-avatar>
+        </ion-col>
+        <ion-col>
+          <h2>Nombre conductor</h2>
+          <p class="info-item">
+            <!-- Corregido el color del icono 'navigate' y cerrado la etiqueta -->
+            <ion-icon name="navigate" color="dark"></ion-icon>
+            <span class="destination-text">Destino</span>
+          </p>
+          <p class="info-item">
+            <ion-icon name="person" color="dark"></ion-icon>
+            <span class="seats-text">Asientos</span>
+          </p>
+        </ion-col>
+      </ion-row>
+    </ion-button>
+  </ion-footer>
+
+
+  <ion-list class="bottomItems shadow-top" lines="full">
+    <ion-item-group class="ion-margin-horizontal ion-margin-bottom">
+      <ion-button shape="round" size="large" expand="block" class="extended-button">
+        <ion-icon slot="end" name="arrow-forward"></ion-icon>
+      </ion-button>
+    </ion-item-group>
+  </ion-list>
+
+
+</ion-content>

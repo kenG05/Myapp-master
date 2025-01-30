@@ -41,9 +41,17 @@ const routes: Routes = [
       import('./error/error.module').then((m) => m.ErrorPageModule),
   },
   {
+    path: 'dispo',
+    loadChildren: () => 
+      import('./dispo/dispo.module').then((m) => m.DispoPageModule),
+     
+  },
+  {
     path: '**',
     redirectTo: 'error',
   },
+  
+
 
 
 
