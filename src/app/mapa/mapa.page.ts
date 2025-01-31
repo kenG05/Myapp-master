@@ -10,16 +10,22 @@ import * as mapboxgl from 'mapbox-gl/dist/mapbox-gl.js';
 })
 export class MapaPage implements OnInit {
 
-  constructor() { }
+  mapa: mapboxgl.Map;
+
+  constructor() {
+    this.mapa = {} as mapboxgl.Map;
+   }
+
+ 
 
   ngOnInit() {
     (mapboxgl as any).accessToken = 'pk.eyJ1Ijoia2VueWkwNSIsImEiOiJjbTZqc2MydzUwNDd4MmtvYnYyZDdwZ21mIn0.vfVdysHEl-DV6oTWKSauvQ';
 
     // Crear el mapa
-    const map = new mapboxgl.Map({
-      container: 'map', // Asegúrate de que este ID existe en tu HTML
+    this.mapa= new mapboxgl.Map({
+      container: 'mapa-mapbox', // Asegúrate de que este ID existe en tu HTML
       style: 'mapbox://styles/mapbox/streets-v11',
-      center: [-74.5, 40], // Coordenadas iniciales (ejemplo)
+      center: [-70.6179919,-33.4331453], // Coordenadas iniciales (ejemplo)
       zoom: 9
     });
     
