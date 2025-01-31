@@ -1,17 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+
 import { IonicModule } from '@ionic/angular';
-import { DispoPageRoutingModule } from './dispo-routing.module';
-import { DispoPage } from './dispo.page';
+
+import { ConductorPageRoutingModule } from './conductor-routing.module';
+
+import { ConductorPage } from './conductor.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    DispoPageRoutingModule
+    ConductorPageRoutingModule
   ],
-  declarations: [DispoPage]
+  declarations: [ConductorPage]
 })
-export class DispoPageModule {}
+export class ConductorPageModule {}

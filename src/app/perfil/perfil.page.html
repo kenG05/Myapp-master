@@ -8,7 +8,7 @@
   <ion-content class="ion-padding">
     <ion-searchbar></ion-searchbar>
 
-    <ion-item class="ion-align-items-center" [routerLink]="['/usuario']">
+    <ion-item class="ion-align-items-center" [routerLink]="['/mi-perfil']">
       <ion-icon name="person-outline" slot="start"></ion-icon>
       <ion-label>Perfil</ion-label>
     </ion-item>
@@ -64,11 +64,11 @@
 
         <ion-card-content>
           <ion-label class="emblematic-text">
-            ¡Bienvenido(a) 
+            <h1>¡Bienvenido(a) </h1>
           </ion-label> <br>
           <ion-label class="emblematic-text destacado">{{nombreUsuario}}</ion-label>
           <ion-label class="emblematic-text"><br>
-            Gracias por haber iniciado sesión en TeLlevoApp!
+            <h2>Gracias por haber iniciado sesión en TeLlevoApp!</h2>
           </ion-label>
         </ion-card-content>
         
@@ -76,7 +76,7 @@
 
           <ion-label>Si eres conductor presiona la siguiente opcion: <br> </ion-label>
           <div id="seccionProgramar">
-            <ion-button expand="full" shape="round" color="tertiary" id="btnProgramar">Programar Viaje</ion-button><br>
+            <ion-button expand="full" shape="round" color="tertiary" id="btnProgramar" [routerLink]="['/conductor']">Programar Viaje</ion-button><br>
           </div>
           <ion-label>Si eres pasajero presiona la siguiente opcion: <br> </ion-label>
           <div id="seccionVerficar">
@@ -87,4 +87,5 @@
       </ion-card>
     </div>
   </ion-content>
+  
 </div>
