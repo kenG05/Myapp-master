@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import * as mapboxgl from 'mapbox-gl';
+
+import * as mapboxgl from 'mapbox-gl/dist/mapbox-gl.js';
 
 @Component({
   selector: 'app-mapa',
@@ -12,7 +13,7 @@ export class MapaPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    mapboxgl.accessToken = 'pk.eyJ1Ijoia2VueWkwNSIsImEiOiJjbTZqc2MydzUwNDd4MmtvYnYyZDdwZ21mIn0.vfVdysHEl-DV6oTWKSauvQ';
+    (mapboxgl as any).accessToken = 'pk.eyJ1Ijoia2VueWkwNSIsImEiOiJjbTZqc2MydzUwNDd4MmtvYnYyZDdwZ21mIn0.vfVdysHEl-DV6oTWKSauvQ';
 
     // Crear el mapa
     const map = new mapboxgl.Map({
