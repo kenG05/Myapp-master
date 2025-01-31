@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import * as mapboxgl from 'mapbox-gl';
+import mapboxgl from 'mapbox-gl';
 
-declare var require: any;
 
 @Component({
   selector: 'app-mapa',
   templateUrl: './mapa.page.html',
   styleUrls: ['./mapa.page.scss'],
+  standalone: false,
 })
 export class MapaPage implements OnInit {
   mapa: mapboxgl.Map;
@@ -14,12 +14,12 @@ export class MapaPage implements OnInit {
 
   constructor() {
     this.mapa = {} as mapboxgl.Map;
-    this.MapboxGeocoder = require('@mapbox/mapbox-gl-geocoder');
+    /* this.MapboxGeocoder = require('@mapbox/mapbox-gl-geocoder'); */
   }
 
   ngOnInit() {
     // Asegúrate de poner tu token de Mapbox
-    (mapboxgl as any).accessToken = 'pk.eyJ1Ijoia2VueWkwNSIsImEiOiJjbTZqc2MydzUwNDd4MmtvYnYyZDdwZ21mIn0.vfVdysHEl-DV6oTWKSauvQ'; 
+    mapboxgl.accessToken = 'pk.eyJ1Ijoia2VueWkwNSIsImEiOiJjbTZqc2MydzUwNDd4MmtvYnYyZDdwZ21mIn0.vfVdysHEl-DV6oTWKSauvQ'; 
 
     // Crear el mapa
     this.mapa = new mapboxgl.Map({
@@ -34,9 +34,10 @@ export class MapaPage implements OnInit {
 
     // Agregar geocodificador para "De"
     const geocoderOrigen = new this.MapboxGeocoder({
-      accessToken: (mapboxgl as any).accessToken,
+      accessToken: mapboxgl.accessToken,
       placeholder: 'De...',
     });
+    /* 
     document.getElementById('origen')?.appendChild(geocoderOrigen.onAdd(this.mapa));
 
     // Agregar geocodificador para "Hacia"
@@ -44,6 +45,6 @@ export class MapaPage implements OnInit {
       accessToken: (mapboxgl as any).accessToken,
       placeholder: 'Hacia...',
     });
-    document.getElementById('destino')?.appendChild(geocoderDestino.onAdd(this.mapa));
+    document.getElementById('destino')?.appendChild(geocoderDestino.onAdd(this.mapa)); */
   }
 }
