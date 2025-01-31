@@ -66,6 +66,13 @@ export class PerfilPage implements OnInit {
     });
   }
 
+  viaje() {
+    this.router.navigate(['/mapa']); 
+  }
+  irAlMapa() {
+    this.router.navigateByUrl('/mapa');
+  }
+  
 
 }
 

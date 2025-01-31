@@ -23,6 +23,10 @@ const routes: Routes = [
 
   },
   {
+    path: 'mapa',
+    loadChildren: () => import('./mapa/mapa.module').then( m => m.MapaPageModule)
+  },
+  {
     path: 'password',
     loadChildren: () => import('./password/password.module').then(m => m.PasswordPageModule)
   },
@@ -45,10 +49,6 @@ const routes: Routes = [
     loadChildren: () => 
       import('./dispo/dispo.module').then((m) => m.DispoPageModule),
      
-  },
-  {
-    path: 'mapa',
-    loadChildren: () => import('./mapa/mapa.module').then( m => m.MapaPageModule)
   },
 
   {
