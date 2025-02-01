@@ -22,10 +22,7 @@ const routes: Routes = [
     canActivate: [authGuard],
 
   },
-  {
-    path: 'mapa',
-    loadChildren: () => import('./mapa/mapa.module').then( m => m.MapaPageModule)
-  },
+ 
   {
     path: 'password',
     loadChildren: () => import('./password/password.module').then(m => m.PasswordPageModule)

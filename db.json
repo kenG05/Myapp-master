@@ -113,6 +113,14 @@
       "destino": " Av. Independencia 565, 8380538 Independencia, Región Metropolitana",
       "asientosDisponibles": 4,
       "imagen": ""
+    },
+    {
+      "id": 1,
+      "conductor": " Sebastian",
+      "inicio": " Av. Independencia 565, 8380538 Independencia, Región Metropolitana",
+      "destino": " Sta. Filomena 348, 8420414 Recoleta, Región Metropolitana",
+      "asientosDisponibles": 3,
+      "imagen": ""
     }
   ],
   "vehiculos": [
