@@ -1,0 +1,13 @@
+.splash-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Usa toda la pantalla */
+    background-color: rgb(0, 0, 0);
+  }
+  
+  .logo {
+    width: 150px; /* Ajusta el tamaño */
+    height: auto;
+  }
+  

@@ -52,9 +52,20 @@ const routes: Routes = [
   },
 
   {
+    path: 'splash',
+    loadChildren: () => import('./splash/splash.module').then( m => m.SplashPageModule)
+  },
+  
+  {
+    path: 'conductor',
+    loadChildren: () => import('./conductor/conductor.module').then(m => m.ConductorPageModule)
+  },
+
+  {
     path: '**',
     redirectTo: 'error',
   },
+
   
 
   

@@ -1,57 +1,45 @@
-<div class="ion-page" id="main-content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-      <ion-title>TeLlevoApp</ion-title>
-      <ion-buttons slot="end">
-        <ion-button [routerLink]="['/perfil']">Volver</ion-button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Conductor</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/perfil']">Volver</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
 
-  <ion-content [fullscreen]="true">
-    <div id="container">
+<ion-content>
+  <ion-segment [(ngModel)]="isConductor" (ionChange)="toggleRole()">
 
+  </ion-segment>
 
-      <!-- Página de Conductor -->
-      <ion-card *ngIf="isConductor">
-        <ion-card-content>
-          <div class="welcome-message">
-            <h1>Bienvenido, Conductor</h1>
-          </div>
-        </ion-card-content>
-      </ion-card>
+  <!-- Formulario para agregar un nuevo viaje -->
+  <div *ngIf="isConductor" >
+    <ion-item>
+      <ion-label>Conductor: </ion-label>
+      <ion-input [(ngModel)]="nuevoViaje.conductor"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Inicio: </ion-label>
+      <ion-input [(ngModel)]="nuevoViaje.inicio"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Destino: </ion-label>
+      <ion-input [(ngModel)]="nuevoViaje.destino"></ion-input> 
+    </ion-item>
+    <ion-item>
+      <ion-label>Asientos Disponibles: </ion-label>
+      <ion-input [(ngModel)]="nuevoViaje.asientosDisponibles" type="number"></ion-input>
+    </ion-item>
 
-      <ion-header *ngIf="isConductor">
-        <ion-toolbar class="header-toolbar">
-          <ion-title>Crear nuevo viaje</ion-title>
-        </ion-toolbar>
-      </ion-header>
+    <ion-button expand="block" (click)="crearViaje()">Crear Viaje</ion-button>
+  
 
-      <form (ngSubmit)="crearViaje()" *ngIf="isConductor">
-        <ion-item class="input-item">
-          <ion-label position="stacked">Conductor</ion-label>
-          <ion-input [(ngModel)]="nuevoViaje.conductor" name="conductor" placeholder="Nombre del conductor" required></ion-input>
-        </ion-item>
-        <ion-item class="input-item">
-          <ion-label position="stacked">Inicio de viaje</ion-label>
-          <ion-input [(ngModel)]="nuevoViaje.inicio" name="inicio" placeholder="Ciudad de inicio" required></ion-input>
-        </ion-item>
-        <ion-item class="input-item">
-          <ion-label position="stacked">Destino de viaje</ion-label>
-          <ion-input [(ngModel)]="nuevoViaje.destino" name="destino" placeholder="Ciudad de destino" required></ion-input>
-        </ion-item>
-        <ion-item class="input-item">
-          <ion-label position="stacked">N° asientos disponibles</ion-label>
-          <ion-input [(ngModel)]="nuevoViaje.asientosDisponibles" name="asientosDisponibles" placeholder="Número de asientos" required></ion-input>
-        </ion-item>
-        <ion-button expand="block" click="" type="submit">Crear Viaje</ion-button>
-      </form>
+  <!-- Mostrar el mapa --><!-- HTML -->
+   
 
+    <div id="mapa-mapbox"></div>
+ 
+ 
+  </div>
 
-    </div>
-  </ion-content>
-</div>
-
+</ion-content>

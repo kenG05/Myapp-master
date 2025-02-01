@@ -29,7 +29,7 @@ export class DispoPage implements OnInit {
   }
 
   listarViajes(): void {
-    this.http.get<Viaje[]>('https://00kfqrfd-3000.brs.devtunnels.ms/conductores')
+    this.http.get<Viaje[]>('https://ksb3rm3t-3000.brs.devtunnels.ms/conductores')
       .subscribe(
         (data) => {
           this.viajes = data;

@@ -67,7 +67,7 @@
       "pass": "maria222"
     },
     {
-      "id": 12,
+      "id": "12",
       "username": "hola",
       "correo": "hola@gmail.com",
       "pass": "123456"
@@ -105,6 +105,14 @@
       "id": "3",
       "nombre": "Marcos Catalan",
       "cantViajes": 50
+    },
+    {
+      "id": 1,
+      "conductor": " maria",
+      "inicio": " Antonio Varas 666, 7500961 Providencia, Región Metropolitana",
+      "destino": " Av. Independencia 565, 8380538 Independencia, Región Metropolitana",
+      "asientosDisponibles": 4,
+      "imagen": ""
     }
   ],
   "vehiculos": [
